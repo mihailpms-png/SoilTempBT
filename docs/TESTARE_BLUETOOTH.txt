@@ -1,0 +1,14 @@
+Testare rapida inainte de aplicatia proprie
+===========================================
+
+1. Imperecheaza HC-05/BT-05 cu telefonul.
+2. Instaleaza o aplicatie de tip Serial Bluetooth Terminal.
+3. Conecteaza la HC-05/BT-05.
+4. Trimite comanda:
+   READ
+5. Firmware-ul trebuie sa raspunda:
+   TEMP=23.56;UNIT=C;STATUS=OK
+
+Daca terminalul primeste raspuns corect, aplicatia SoilTemp BT ar trebui sa functioneze.
+Daca terminalul nu primeste nimic, problema este la firmware, cablare RX/TX, baud rate sau modulul Bluetooth.
+

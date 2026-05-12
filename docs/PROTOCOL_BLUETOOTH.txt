@@ -1,0 +1,29 @@
+Protocol Bluetooth SoilTemp
+===========================
+
+Aplicatia trimite comenzi terminate cu \n:
+
+READ
+AUTO=1
+AUTO=0
+INT=10
+CAL=0.50
+CAL=-0.30
+AWAKE=180
+SLEEP
+PING
+INFO
+
+Firmware-ul trebuie sa raspunda pe linii terminate cu \n:
+
+TEMP=23.56;UNIT=C;STATUS=OK
+TEMP=ERR;STATUS=SENSOR_NOT_FOUND
+TEMP=ERR;STATUS=CRC_ERROR
+STATUS=DEVICE_READY
+STATUS=AUTO_ON
+STATUS=AUTO_OFF
+PONG
+
+Aplicatia parseaza doar liniile care incep cu TEMP= pentru afisarea temperaturii.
+Toate liniile primite sunt afisate in jurnal.
+
